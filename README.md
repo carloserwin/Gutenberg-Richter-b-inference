@@ -63,7 +63,15 @@ DATA/BDf2_tehuantepec_2017_100km.rds
 
 The input must contain the magnitude column `Magnitud` and the local event time column `datetime_local`. It analyzes overlapping windows of 400 earthquakes advanced by 50 events, applying an event-level uniform jitter once to the full catalogue before constructing the windows. The principal figure is saved to `GRAF/b_graf.pdf`.
 
-The input RDS catalogue must be provided separately if it is not included in the repository. Data provenance and any redistribution conditions should be checked before publishing the dataset.
+### Data source and attribution
+
+The underlying earthquake observations come from the **Servicio Sismológico Nacional (SSN), Instituto de Geofísica, Universidad Nacional Autónoma de México (UNAM)**, [SSN earthquake catalogue](http://www2.ssn.unam.mx:8080/catalogo/), DOI: [10.21766/SSNMX/EC/MX](https://doi.org/10.21766/SSNMX/EC/MX). The original CSV was downloaded for the period January 1–December 31, 2017 (all of Mexico, all magnitudes and depths), and generated on April 27, 2026 at 10:26:36 (Mexico City time).
+
+The input file `BDf2_tehuantepec_2017_100km.rds` is a **processed subset** for the Tehuantepec analysis, not the complete SSN catalogue. The catalogue may be updated or revised by the SSN.
+
+The SSN legal notice permits noncommercial consultation, use, dissemination and reproduction of information from its site, provided its original meaning is not mutilated or distorted, and the full source and electronic address are acknowledged; other uses require prior written permission. This permission concerns the **SSN data** and should not be confused with any licence for the R code. See the [SSN website](http://www.ssn.unam.mx) for the original source and legal notice.
+
+Until the processed input file is included here, users must provide it at the path above.
 
 ## Reproducibility notes
 
